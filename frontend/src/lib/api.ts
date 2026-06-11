@@ -1,7 +1,14 @@
 import type { ApiError } from "@/types/api";
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api/v1";
+function resolveApiUrl(): string {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL;
+  }
+  if (typeof window !== "undefined") {
+    return `${window.location.origin}/_/backend/api/v1`;
+  }
+  return "http://localhost:8000/api/v1";
+}
 
 const TOKEN_KEY = "access_token";
 
@@ -52,7 +59,7 @@ function buildUrl(
   params?: Record<string, string | number | boolean | undefined | null>
 ): string {
   const url = new URL(
-    path.startsWith("http") ? path : `${API_URL}${path.startsWith("/") ? path : `/${path}`}`
+    path.startsWith("http") ? path : `${resolveApiUrl()}${path.startsWith("/") ? path : `/${path}`}`
   );
 
   if (params) {
@@ -139,11 +146,11 @@ export async function apiFetch<T>(
 }
 
 export function getApiBaseUrl(): string {
-  return API_URL;
+  return resolveApiUrl();
 }
 
 export function getGmailConnectUrl(): string {
-  return `${API_URL}/gmail/connect`;
+  return `${resolveApiUrl()}/gmail/connect`;
 }
 
 // Auth

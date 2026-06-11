@@ -1,6 +1,7 @@
 """FastAPI application entry point."""
 
 import asyncio
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -40,7 +41,7 @@ async def lifespan(app: FastAPI):
 
     stop_event = asyncio.Event()
     scheduler_task: asyncio.Task | None = None
-    if settings.scheduler_background_enabled:
+    if settings.scheduler_background_enabled and not os.environ.get("VERCEL"):
         scheduler_task = asyncio.create_task(background_scheduler_loop(stop_event))
 
     yield
@@ -61,9 +62,20 @@ app = FastAPI(
 )
 
 app.add_middleware(RequestIdMiddleware)
+def _cors_origins() -> list[str]:
+    origins = list(settings.cors_origins)
+    for origin in (settings.frontend_url, os.environ.get("VERCEL_URL")):
+        if not origin:
+            continue
+        normalized = origin if origin.startswith("http") else f"https://{origin}"
+        if normalized not in origins:
+            origins.append(normalized)
+    return origins
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=_cors_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
