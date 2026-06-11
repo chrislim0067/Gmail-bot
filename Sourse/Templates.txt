@@ -1,0 +1,99 @@
+--- Version 1 ---
+Hi {{name}},
+
+I hope you're having a good week. I'm Chris, a senior software engineer based in Singapore. I came across your profile and thought it made sense to connect. I've recently been looking for talented people to work with, and your background stood out. I'd be glad to explore a collaboration where we both bring something useful to the table and move quickly on ideas worth building. If that sounds interesting, I'd welcome a quick reply.
+
+--- Version 2 ---
+Hi {{name}},
+
+I'm Chris from Singapore — a senior software engineer. I found your profile while looking for talented people I could genuinely work with, and I wanted to reach out directly. I believe we could create something strong together if our goals align, especially if we're both open to moving fast and building with intent. No pressure at all. If you're open to a conversation, I'd appreciate hearing from you.
+
+--- Version 3 ---
+Hi {{name}},
+
+Chris here — senior software engineer, Singapore-based. I came across your profile and wanted to connect for a straightforward reason: I'm currently looking for strong talent to collaborate with, and your experience seems like a great fit. I enjoy working with people who are serious about building useful things. If you're curious, I'd be happy to share more about what I have in mind and hear what you're focused on.
+
+--- Version 4 ---
+Hi {{name}},
+
+I hope all is well on your end. My name is Chris, a senior software engineer based in Singapore. I reached out after reviewing your profile because I'm actively looking for talented people to work with, and I see potential for a partnership that could create real value for both of us in a relatively short timeframe. If that resonates, let me know and we can take it from there.
+
+--- Version 5 ---
+Hi {{name}},
+
+I'll keep this brief. Chris here from Singapore, senior software engineer. Your profile caught my attention while I was looking for people to collaborate with. I think we may be well positioned to work together on something worthwhile, and I tend to move quickly when there's a clear fit. If you're open to exploring that, I'd love to connect properly and hear your thoughts.
+
+--- Version 6 ---
+Hi {{name}},
+
+I hope you're doing well. I'm Chris, a senior software engineer working out of Singapore. I've recently started looking for talented people to build with, and your background suggests we might collaborate in a way that benefits us both. I appreciate people who think long term but execute in the near term. If that sounds like your style, I'd be glad to start a conversation.
+
+--- Version 7 ---
+Hi {{name}},
+
+Chris here from Singapore — senior software engineer. I came across your profile and thought it was worth reaching out personally. I'm currently looking for strong talent to work with, and I believe the best professional relationships grow when both sides see an opportunity to create something useful together. I'd be interested to learn what you're building and share where I think we might complement each other. If you're open to it, I'd welcome a reply.
+
+--- Version 8 ---
+Hi {{name}},
+
+My name is Chris, a senior software engineer based in Singapore. I found your profile recently and wanted to introduce myself. I'm actively looking for talented people to collaborate with, and I think there could be a strong basis for us to work together — especially if we're focused on meaningful outcomes rather than just expanding our networks. If you're interested, I'd appreciate hearing from you.
+
+--- Version 9 ---
+Hi {{name}},
+
+I hope this finds you well. I'm Chris from Singapore, a senior software engineer. I connected with you after coming across your profile because I'm looking for capable talent to work with, and I see an opportunity for us to create something valuable in a focused, efficient way. I value direct conversations with people who are serious about execution. If that sounds relevant, I'd be happy to continue the discussion.
+
+--- Version 10 ---
+Hi {{name}},
+
+Chris here, senior software engineer in Singapore. I wanted to reach out after reviewing your profile because I'm recently looking for talented people to collaborate with, and I think we may have complementary strengths. Your experience stood out for that reason. No big pitch here — just a genuine invitation to connect. If you're interested, I'd love to hear back from you.
+
+--- Version 11 ---
+Hi {{name}},
+
+I'm Chris, a senior software engineer based in Singapore. I came across your profile and thought there was a good reason to connect beyond the usual LinkedIn exchange. I'm currently seeking talented people to work with, and your background suggests we could create strong outcomes together if our priorities align. If you're open to exploring that, I'd be glad to start a conversation.
+
+--- Version 12 ---
+Hi {{name}},
+
+I hope you're having a productive week. My name is Chris — senior software engineer from Singapore. I reached out because I've been looking for strong talent to collaborate with, and your profile made me think we could build something worthwhile together without needing a long runway to get started. If that idea appeals to you, I'd welcome the chance to talk further.
+
+--- Version 13 ---
+Hi {{name}},
+
+Chris from Singapore here, senior software engineer. I found your profile while looking for talented people I'd genuinely want to work with, not just add to a contact list. I think there may be room for us to collaborate in a way that is mutually beneficial and moves at a healthy pace. If you're curious about what I have in mind, I'd be happy to share more and hear what you're focused on.
+
+--- Version 14 ---
+Hi {{name}},
+
+I hope all is well. I'm Chris, a senior software engineer working from Singapore. I wanted to connect after seeing your profile because I'm recently looking for strong talent to build with, and I believe we could create something valuable together if there's alignment on goals and approach. If that sounds like a conversation worth having, please let me know.
+
+--- Version 15 ---
+Hi {{name}},
+
+Chris here, senior software engineer based in Singapore. I came across your profile and wanted to introduce myself properly. I'm actively looking for talented people to work with, and I see potential for a collaboration that could be genuinely valuable for both of us. I'm not trying to sell you anything — just exploring whether there's a fit. If you're open, I'd love to hear from you.
+
+--- Version 16 ---
+Hi {{name}},
+
+I'm Chris from Singapore — a senior software engineer. I hope you're doing well. I reviewed your profile and thought it was worth connecting directly, as I'm currently looking for talented people to collaborate with. I believe the right partnership can create excellent results in a relatively short period when both people bring clarity and momentum. If you're interested, I'd be glad to continue the conversation.
+
+--- Version 17 ---
+Hi {{name}},
+
+Chris here from Singapore, senior software engineer. I'll be direct: your profile stood out while I was looking for talent to work with. I think there may be a real opportunity for us to collaborate. I enjoy building with people who are serious about creating value and willing to move efficiently when the fit is right. If that sounds interesting, I'd appreciate a quick reply.
+
+--- Version 18 ---
+Hi {{name}},
+
+My name is Chris, a senior software engineer based in Singapore. I came across your profile and wanted to reach out because I'm recently looking for talented people to work with, and I think we could create something meaningful together if our interests overlap. I value professional relationships that are positive, practical, and built around mutual benefit. If you're open to a short conversation, I'd welcome hearing from you.
+
+--- Version 19 ---
+Hi {{name}},
+
+I hope you're well. I'm Chris from Singapore, a senior software engineer. I found your profile recently and thought it made sense to connect with a clear purpose: I'm looking for strong talent to collaborate with and build something worthwhile in a focused timeframe. If you're interested, I'd be happy to hear what you're working on and share more about my side as well.
+
+--- Version 20 ---
+Hi {{name}},
+
+Chris here — senior software engineer, Singapore-based. I wanted to connect after coming across your profile because I'm actively looking for talented people to work with, and I see a possible fit for collaboration that could benefit us both. I tend to look for people who combine strong experience with a willingness to build quickly and thoughtfully. If that resonates, I'd be glad to connect properly and hear from you.

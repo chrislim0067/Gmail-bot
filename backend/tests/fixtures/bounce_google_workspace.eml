@@ -1,0 +1,15 @@
+From: Mail Delivery Subsystem <mailer-daemon@google.com>
+To: sender@company.com
+Subject: Delivery has failed to these recipients or groups
+MIME-Version: 1.0
+Content-Type: multipart/report; boundary="ws-boundary"
+
+--ws-boundary
+Content-Type: message/delivery-status
+
+Final-Recipient: rfc822; invalid@workspace-client.com
+Action: failed
+Status: 5.2.1
+Diagnostic-Code: smtp; 552 5.2.1 The email account is disabled.
+
+--ws-boundary--

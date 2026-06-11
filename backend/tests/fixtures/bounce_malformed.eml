@@ -1,0 +1,7 @@
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+To: sender@gmail.com
+Subject: Delivery Status Notification (Failure)
+MIME-Version: 1.0
+Content-Type: text/plain
+
+An error occurred delivering your message. No recipient details available.
