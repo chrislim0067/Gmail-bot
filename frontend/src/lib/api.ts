@@ -1,12 +1,28 @@
 import type { ApiError } from "@/types/api";
 
+function isLocalhostUrl(url: string): boolean {
+  return /localhost|127\.0\.0\.1/i.test(url);
+}
+
 function resolveApiUrl(): string {
-  if (process.env.NEXT_PUBLIC_API_URL) {
-    return process.env.NEXT_PUBLIC_API_URL;
-  }
+  const configured = process.env.NEXT_PUBLIC_API_URL?.trim();
+
   if (typeof window !== "undefined") {
+    const onLocalSite =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1";
+
+    if (configured && !(isLocalhostUrl(configured) && !onLocalSite)) {
+      return configured;
+    }
+
     return `${window.location.origin}/_/backend/api/v1`;
   }
+
+  if (configured) {
+    return configured;
+  }
+
   return "http://localhost:8000/api/v1";
 }
 
@@ -100,9 +116,15 @@ export async function apiFetch<T>(
             : undefined,
     });
   } catch {
+    const isLocal =
+      typeof window !== "undefined" &&
+      (window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1");
+
     throw new ApiClientError(0, {
-      detail:
-        "Cannot reach the API server. Make sure GmailOutreach-Start.bat is running (API on port 8000).",
+      detail: isLocal
+        ? "Cannot reach the API server. Make sure GmailOutreach-Start.bat is running (API on port 8000)."
+        : "Cannot reach the API server. Check Vercel deployment and remove localhost from NEXT_PUBLIC_API_URL.",
       code: "network_error",
     });
   }
