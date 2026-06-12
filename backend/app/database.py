@@ -17,6 +17,18 @@ from app.config import get_settings
 
 settings = get_settings()
 
+
+def _is_local_database(url: str) -> bool:
+    lowered = url.lower()
+    return "localhost" in lowered or "127.0.0.1" in lowered
+
+
+def _engine_connect_args() -> dict:
+    if _is_local_database(settings.database_url):
+        return {}
+    return {"ssl": True}
+
+
 _pool_kwargs = (
     {"pool_size": 1, "max_overflow": 0}
     if settings.is_vercel
@@ -28,6 +40,7 @@ engine = create_async_engine(
     echo=False,
     pool_pre_ping=True,
     pool_recycle=1800,
+    connect_args=_engine_connect_args(),
     **_pool_kwargs,
 )
 
