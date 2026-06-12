@@ -17,13 +17,18 @@ from app.config import get_settings
 
 settings = get_settings()
 
+_pool_kwargs = (
+    {"pool_size": 1, "max_overflow": 0}
+    if settings.is_vercel
+    else {"pool_size": 10, "max_overflow": 20}
+)
+
 engine = create_async_engine(
     settings.database_url,
     echo=False,
     pool_pre_ping=True,
-    pool_size=10,
-    max_overflow=20,
     pool_recycle=1800,
+    **_pool_kwargs,
 )
 
 async_session_factory = async_sessionmaker(

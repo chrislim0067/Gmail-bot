@@ -33,15 +33,31 @@ from app.utils.redis_client import close_async_redis
 settings = get_settings()
 
 
+def _should_init_db_on_startup() -> bool:
+    if settings.is_development:
+        return True
+    if not settings.is_vercel:
+        return False
+    url = settings.database_url.lower()
+    return "localhost" not in url and "127.0.0.1" not in url
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     setup_logging()
-    if settings.is_development:
-        await init_db()
+    if _should_init_db_on_startup():
+        try:
+            await init_db()
+        except Exception:
+            import logging
+
+            logging.getLogger(__name__).exception(
+                "Database init failed on startup — check DATABASE_URL"
+            )
 
     stop_event = asyncio.Event()
     scheduler_task: asyncio.Task | None = None
-    if settings.scheduler_background_enabled and not os.environ.get("VERCEL"):
+    if settings.scheduler_background_enabled and not settings.is_vercel:
         scheduler_task = asyncio.create_task(background_scheduler_loop(stop_event))
 
     yield

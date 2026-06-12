@@ -134,7 +134,10 @@ export async function apiFetch<T>(
       throw new ApiClientError(response.status, errorBody);
     }
     throw new ApiClientError(response.status, {
-      detail: response.statusText || "Request failed",
+      detail:
+        response.status >= 500
+          ? "API server error. Check Vercel env vars (DATABASE_URL, JWT_SECRET, REDIS_URL)."
+          : response.statusText || "Request failed",
     });
   }
 

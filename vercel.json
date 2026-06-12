@@ -6,7 +6,7 @@
       "routePrefix": "/"
     },
     "backend": {
-      "entrypoint": "backend",
+      "entrypoint": "backend/index.py",
       "framework": "fastapi",
       "routePrefix": "/_/backend",
       "maxDuration": 60

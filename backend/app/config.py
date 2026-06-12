@@ -1,5 +1,6 @@
 """Application settings loaded from environment variables."""
 
+import os
 from functools import lru_cache
 
 from pydantic import Field
@@ -69,7 +70,13 @@ class Settings(BaseSettings):
     service_token: str | None = None
 
     @property
+    def is_vercel(self) -> bool:
+        return bool(os.environ.get("VERCEL"))
+
+    @property
     def is_development(self) -> bool:
+        if self.is_vercel:
+            return False
         return self.app_env == "development"
 
 
